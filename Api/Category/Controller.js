@@ -153,7 +153,7 @@ const createCategory = async (req, res) => {
 
     if (!CategoryName || !CategoryImage) {
         res.status(403).json({
-            message: "Missing Required Field"
+            message: "Migitssing Required Field"
         })
     }
 
