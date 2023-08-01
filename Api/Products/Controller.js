@@ -1,4 +1,4 @@
-require('dotenv').config()
+/* require('dotenv').config()
 const Products = require('./Router')
 const { connect } = require('mongoose')
 
@@ -28,3 +28,4 @@ const DeleteProduct  = async (req, res) => {
 }
 
 module.exports = { CreateProduct, getAllProduct,  getProductByBrand, getProductByCategory, UpdateProduct, DeleteProduct}
+ */
