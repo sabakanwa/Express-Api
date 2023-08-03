@@ -1,39 +1,39 @@
-/* const { Schema, model } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
-const ProductSchema = new Schema({
-    name : {
-        type : String,
-        required : true,
-        unique : true
-    },
-    price : {
-        type : Number,
-        required : true,
-    },
-    category : {
-        type : String,
-        required : true,
-    },
-    brand : {
-        type : String,
-        required : true,
-    },
-    thumbnail : {
-        type : String,
-        required : true,
-    },
-    images: [
-        {
-          type: String,
-          required: true,
-          default: "https://www.namepros.com/attachments/empty-png.89209/",
-        },
-      ],
-    description : {
-        type : String,
-        required : true,
-    }
-})
 
-const Product = model('product', ProductSchema)
-module.exports = Product */
+const productSchema = new Schema({
+  ProductName: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: "Category",
+    required: true, 
+  },
+  brand: {
+    type: Schema.Types.ObjectId,
+    ref: "Brand",
+    required: true, 
+  },
+  thumbnail: {
+    type: String,
+    required: true,
+  },
+  imageArray: {
+    type: [String],
+    required: true,
+  },
+});
+
+const Product = model("Product", productSchema);
+
+module.exports = Product;
