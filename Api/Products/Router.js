@@ -4,13 +4,13 @@ const { createProduct, getProductByBrand, getAllProduct, getProductByName, getPr
 
 
 router.post('/create-product' , createProduct)
-router.get('/get-all-products' , getAllProduct)
+ router.get('/get-all-products' , getAllProduct)
 router.get('/get-product-by-name' , getProductByName)
 router.get('/get-product-by-id' , getProductById)
 router.get('/get-product-by-brand' , getProductByBrand)
 router.get('/get-product-by-category' , getProductByCategory)
 router.put('/update-product' , updateProduct)
-router.delete('/delete-product' , deleteProduct)
+router.delete('/delete-product' , deleteProduct) 
 
 
-module.exports = router;
+module.exports = router

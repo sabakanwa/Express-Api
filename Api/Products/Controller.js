@@ -156,6 +156,6 @@ const deleteProduct = async (req, res) => {
             message: error.message
         })
     }
-}
+} 
 
-module.exports = { createProduct, getProductByBrand, getAllProduct, getProductByName, getProductById, getProductByCategory, updateProduct, deleteProduct }
+module.exports = { createProduct , getProductByBrand, getAllProduct, getProductByName, getProductById, getProductByCategory, updateProduct, deleteProduct  }

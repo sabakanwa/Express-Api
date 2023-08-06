@@ -4,7 +4,7 @@ require('dotenv').config()
 const { hash, compare } = require('bcryptjs')
 const { sign } = require('jsonwebtoken')
 
-const login = async (req, res)=>{
+ const login = async (req, res)=>{
     const { Email, Password } = req.body
     if (!Email || !Password) {
         res.status(403).json({
@@ -56,7 +56,7 @@ const login = async (req, res)=>{
         }
     }
 
-}
+} 
 
 const singup = async (req, res)=>{
     const { Name, Email, Password } = req.body
@@ -90,7 +90,7 @@ const singup = async (req, res)=>{
 
     }
 }
-const getAllUsers =  async (req, res)=>{
+ const getAllUsers =  async (req, res)=>{
     try {
         await connect(process.env.MONGO_URI)
         const users = await User.find()
@@ -167,6 +167,6 @@ const updateProfile =  async (req, res)=>{
     }
 
 
-}
+} 
 
-module.exports = {login, singup, getAllUsers, userByID, deleteUser, updateProfile}
+module.exports = { login,  singup , getAllUsers, userByID, deleteUser, updateProfile }
